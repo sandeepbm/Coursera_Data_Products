@@ -1,0 +1,18 @@
+---
+title: "Plotly_presentation"
+author: "Sandeep"
+date: "July 18, 2017"
+output: ioslides_presentation
+---
+
+## InsectSprays Dataset
+The InsectSprays dataset contains the counts of insects in agricultural experimental units treated with different insecticides.  
+
+In the next slide, we construct a boxplot of insect count vs the spray type using **plotly** in order to compare the effectiveness of the different sprays. 
+
+## InsectSprays Plot
+```{r warning=FALSE,message=FALSE}
+library(plotly)
+plot_ly(InsectSprays,y=~count,type="box",color=~spray)
+```
+
